@@ -1,0 +1,106 @@
+            _ _     _ _ _         
+           | (_)   | (_) |        
+  ___  ___ | |_  __| |_| |_ _   _ 
+ / __|/ _ \| | |/ _` | | __| | | |
+ \__ \ (_) | | | (_| | | |_| |_| |
+ |___/\___/|_|_|\__,_|_|\__|\__, |
+                             __/ |
+                            |___/ 
+
+----------------------------------
+
+docker pull ethereum/solc:stable
+docker run ethereum/solc:stable
+docker run ethereum/solc:stable --version
+
+https://remix.ethereum.org/
+
+Compile, Deploy
+
+----------------------------------
+
+// comment
+/* comment */
+
+----------------------------------
+
+> pragma solidity >=0.4.0 <0.6.0;
+
+version 0.4.0 or anything newer,
+but not including, version 0.6.0
+
+> pragma solidity ^0.4.0;
+
+version 0.4.0 or anything newer
+
+> import "filename";
+
+imports all global symbols from "filename"
+
+> import * as symbolName from "filename";
+
+creates a new global symbol symbolName whose members are all the global symbols from "filename"
+
+----------------------------------
+
+reserved keywords
+
+abstract after alias apply auto 
+case catch copyof default define
+final immutable implements in inline
+let macro match mutable null
+of override partial promise reference
+relocatable sealed sizeof static supports
+switch try typedef typeof unchecked
+
+----------------------------------
+
+types
+
+Boolean : bool ; true/false
+Integer : int/uint ; Signed and unsigned integers of varying sizes.
+Integer : int8 to int256 ; Signed int from 8 bits to 256 bits. int256 is the same as int.
+Integer : uint8 to uint256 ; Unsigned int from 8 bits to 256 bits. uint256 is the same as uint.
+Fixed Point Numbers : fixed/unfixed ; Signed and unsigned fixed point numbers of varying sizes.
+Fixed Point Numbers : fixedMxN ; Signed fixed point number.
+Fixed Point Numbers : ufixedMxN ; Unsigned fixed point number.
+
+M represents the number of bits taken by type and N represents the decimal points.
+M should be divisible by 8 and goes from 8 to 256. N can be from 0 to 80.
+
+----------------------------------
+
+address
+
+> address x = 0x212;
+> address myAddress = this;
+> if (x.balance < 10 && myAddress.balance >= 10) x.transfer(10);
+
+address holds the 20 byte value representing the size of an Ethereum address.
+.balance ; to get the balance 
+.transfer ; to transfer balance to another address
+
+----------------------------------
+
+variables
+
+state variables ; permanently stored in a contract storage
+local variables ; present till function is executing
+global variables ; special variables exists in the global namespace used to get information about the blockchain
+
+statically typed language ; the state or local variable type needs to be specified during declaration
+default values ; each declared variable always have a default value based on its type
+undefined/null ; there is no concept of "undefined" or "null"
+
+----------------------------------
+
+----------------------------------
+
+----------------------------------
+
+----------------------------------
+
+----------------------------------
+
+
+
